@@ -81,17 +81,17 @@ public class Sudoku {
 
         //列印結果
         for(int i = 0; i < 9; i++){
-            if(i % 3 == 0)System.out.println("-------------------");
+            if(i % 3 == 0)System.out.println(" -------------------------");
             for(int j = 0; j < 9; j++){
                 if(j % 3 == 0){
-                    System.out.print("|" + grid[i][j]);
+                    System.out.print(" | " + grid[i][j]);
                 }else{
                     System.out.print(" " + grid[i][j]);
                 }
-                if(j == 8)System.out.print("|");
+                if(j == 8)System.out.print(" |");
             }
             System.out.println();
         }
-        System.out.println("-------------------");
+        System.out.println(" -------------------------");
     }
 }
