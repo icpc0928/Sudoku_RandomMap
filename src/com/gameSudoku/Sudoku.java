@@ -5,15 +5,27 @@ public class Sudoku {
     public static void main(String[] args){
         SudokuAnsMaker ansMaker = new SudokuAnsMaker();
         SudokuQuestionMaker questionMaker = new SudokuQuestionMaker();
+        SudokuCheckQuestion checkQuestion = new SudokuCheckQuestion();
+
         int[][] answerGrid = ansMaker.makeAnswer();
         int[][] questionGrid = questionMaker.makeQuestion(answerGrid, 40);
-
-
 
         //列印answerGrid結果
         printGrid(answerGrid);
         //列印questionGrid結果
         printGrid(questionGrid);
+
+        int[][] newAnsGrid = checkQuestion.checkQuestion(questionGrid,answerGrid);
+
+        printGrid(newAnsGrid);
+
+
+
+
+
+
+
+
 
 
     }
